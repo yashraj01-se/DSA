@@ -16,7 +16,7 @@ struct Node
         left = right = NULL;
     }
 };
-void root_to_node(Node* root,vector<int>&ans,vector<vector<int>>&result){
+void root_to_leaf(Node* root,vector<int>&ans,vector<vector<int>>&result){
         if(root==nullptr)return;
         ans.push_back(root->data);
        
@@ -24,8 +24,8 @@ void root_to_node(Node* root,vector<int>&ans,vector<vector<int>>&result){
             result.push_back(ans);
         }
         else{
-            root_to_node(root->left,ans,result);
-            root_to_node(root->right,ans,result);
+            root_to_leaf(root->left,ans,result);
+            root_to_leaf(root->right,ans,result);
         }
       
 
@@ -38,7 +38,7 @@ vector<vector<int>>answer(Node * root){
     if(root==nullptr){
         result.push_back(ans);
     }
-    root_to_node(root,ans,result);
+    root_to_leaf(root,ans,result);
     return result;
 }
 int main(){

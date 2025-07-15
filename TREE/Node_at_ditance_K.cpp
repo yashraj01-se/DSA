@@ -18,7 +18,7 @@ struct Node
     }
 };
 
-void parent(Node *root, unordered_map<Node *, Node *>&parentmaker, Node *target)
+void parent(Node *root, unordered_map<Node *, Node *>&parentmaker)
 {
     if (root == nullptr)
         return;
@@ -55,7 +55,7 @@ int main()
     root->right->right = new Node(8);
 
     unordered_map<Node *, Node *> parentMaker;
-    parent(root, parentMaker, target);
+    parent(root, parentMaker);
 
     unordered_map<Node*,bool>visited;
     queue<Node*>q;
@@ -66,6 +66,7 @@ int main()
     while(!q.empty()){
         int size=q.size();
         if(dis==k)break;
+        dis++;
         for(int i=0;i<size;i++){
             Node * curr=q.front();
             q.pop();

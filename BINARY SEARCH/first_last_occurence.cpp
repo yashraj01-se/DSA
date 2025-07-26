@@ -8,18 +8,15 @@ int first_o(int arr[], int k, int n)
     while (lb <= ub)
     {
         int mid = lb + (ub - lb) / 2;
-        if (arr[mid] == k)
-        {
-            index = mid;
-            ub = mid - 1;
+        if(arr[mid]==k){
+            index=mid;
+            ub=mid-1;
         }
-        else if (arr[mid] < k)
-        {
-            lb = mid + 1;
+        else if(arr[mid]>k){
+            ub=mid-1;
         }
-        else
-        {
-            ub = mid - 1;
+        else{
+            lb=mid+1;
         }
     }
     return index;
@@ -31,20 +28,17 @@ int last_o(int arr[], int k, int n)
     int ub = n - 1;
     while (lb <= ub)
     {
-        int mid = lb + (ub - lb) / 2;
-        if (arr[mid] == k)
-        {
-            index = mid;
-            lb = mid + 1;
-        }
-        else if (arr[mid] < k)
-        {
-            lb = mid + 1;
-        }
-        else
-        {
-            ub = mid - 1;
-        }
+       int mid=lb+(ub-lb)/2;
+       if(arr[mid]==k){
+           index=mid;
+           lb=mid+1;
+       }
+       else if(arr[mid]<k){
+        lb=mid+1;
+       }
+       else{
+        ub=mid-1;
+       }
     }
     return index;
 }

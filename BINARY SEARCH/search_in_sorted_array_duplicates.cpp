@@ -16,7 +16,7 @@ bool search(int arr[], int n, int k)
         if (arr[lb] == arr[mid] && arr[mid] == arr[ub])  // taking Advantage of the Scenario....
         {
             lb++;
-            ub++;
+            ub--;
         }
         else if (arr[mid] >= arr[lb])
         {

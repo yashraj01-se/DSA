@@ -29,7 +29,6 @@ int main()
     int h = 5;
     int lb = 1;
     int ub = maxi(piles);
-    int ans = 1;
     while (lb <= ub)
     {
         long mid = lb + (ub - lb) / 2;
@@ -40,9 +39,8 @@ int main()
         }
         else
         {
-            ans = mid;
             ub = mid - 1;
         }
     }
-    cout << ans;
+    cout << lb;
 }

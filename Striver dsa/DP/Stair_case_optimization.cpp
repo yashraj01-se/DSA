@@ -7,7 +7,7 @@ int staircase(int n ,vector<int>&dparray){
     return dparray[n]=staircase(n-1,dparray)+staircase(n-2,dparray);
 }
 int main(){
-    int n=3;
+    int n =3;
     vector<int>dparray(n+1,-1);
     int ans=staircase(n,dparray);
     cout<<ans;

@@ -1,6 +1,3 @@
----
-
-```markdown
 # ⚡ Data Structures and Algorithms — yashraj01-se
 
 This repository is a complete collection of my **Data Structures and Algorithms (DSA)** practice work — implemented in **C++** and organized topic-wise.  

@@ -13,7 +13,7 @@ int find_shortest_path(pair<int, int> &src, pair<int, int> &dest, vector<vector<
     q.push({0, {src.first, src.second}});
 
     // Step 2: Direction
-    int delrow[4] = {-1, 0, +1, 0};
+    int delrow[4] = {-1, 0, +1, 0};    // Similarly as for 4 direction we can do for 8 direction also
     int delcol[4] = {0, +1, 0, -1};
 
     // Edge Cases:
